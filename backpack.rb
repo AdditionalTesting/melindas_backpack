@@ -49,7 +49,7 @@ class Backpack
     # Bring a packed lunch on all weekdays
     if day_of_week != 'saturday' && day_of_week != 'sunday'
       @items << 'packed lunch'
-    elsif false
+    else
       # Used to bring snacks on weekend trips, but now I just buy 'em
       @items << 'snacks'
     end
