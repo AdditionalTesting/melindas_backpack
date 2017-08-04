@@ -3,6 +3,9 @@ class Backpack
     @attributes = attributes # a hash containing day_of_week and weather keys
     @items = []
     prepare
+    gym_prep
+    lunch_snack
+
   end
 
   def items
@@ -27,6 +30,11 @@ class Backpack
       @items << 'pants'
       @items << 'shirt'
     end
+  end
+
+
+  def gym_prep
+      day_of_week = @attributes[:day_of_week]
 
     # Ensure gym shoes are added to backpack if it's a gym day
     # Gotta get to the gym on Monday and Thursdays. Wait a sec...
@@ -34,7 +42,10 @@ class Backpack
       #add gym shoes to items
       @items << 'gym shoes'
     end
+  end
 
+  def lunch_snack
+    day_of_week = @attributes[:day_of_week]
     # Bring a packed lunch on all weekdays
     if day_of_week != 'saturday' && day_of_week != 'sunday'
       @items << 'packed lunch'
